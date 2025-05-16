@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Wellbeing System</title>
     <style>
-        /* New Authentication Styles */
+        
         .auth-container {
             display: flex;
             gap: 40px;
@@ -44,7 +44,7 @@
                 cursor: pointer;
             }
 
-        /* Senior Tutor Additions */
+        
         .supervisor-activity {
             margin-top: 30px;
             padding: 20px;
@@ -61,7 +61,7 @@
             border-radius: 4px;
         }
 
-        /* Original Global Styles */
+       
         * {
             box-sizing: border-box;
             margin: 0;
@@ -79,7 +79,7 @@
             display: none !important;
         }
 
-        /* Original Login Page Styles */
+        
         .login-container {
             max-width: 800px;
             margin: 50px auto;
@@ -131,7 +131,7 @@
             margin-bottom: 10px;
         }
 
-        /* Original Dashboard Styles */
+        
         .dashboard-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -199,7 +199,7 @@
                 display: block;
             }
 
-        /* Original Status Cards */
+        
         .status-container {
             display: flex;
             flex-wrap: wrap;
@@ -305,7 +305,7 @@
                 color: #e74c3c;
             }
 
-        /* Original Meetings Styles */
+        
         .new-meeting {
             padding: 10px 20px;
             margin-bottom: 20px;
@@ -350,7 +350,7 @@
                 color: #856404;
             }
 
-        /* Original Booking Form */
+        
         .booking-form {
             padding: 20px;
             margin: 20px 0;
@@ -409,7 +409,7 @@
                         background: #c0392b;
                     }
 
-        /* Original Supervisor Dashboard Styles */
+        
         .student-card {
             padding: 20px;
             margin: 15px 0;
@@ -514,7 +514,7 @@
                 border-radius: 4px;
             }
 
-        /* Original Responsive Styles */
+        
         @media (max-width: 768px) {
             .role-selection {
                 flex-direction: column;
@@ -572,7 +572,7 @@
     </style>
 </head>
 <body>
-    <!-- Role Selection Page -->
+   
     <div id="role-selection" class="login-container">
         <header>
             <h1>Student Wellbeing System</h1>
@@ -600,7 +600,7 @@
         </div>
     </div>
 
-    <!-- Authentication Page -->
+    
     <div id="auth-page" class="login-container hidden">
         <div class="auth-container">
             <div class="auth-section">
@@ -620,7 +620,7 @@
         </div>
     </div>
 
-    <!-- Student Dashboard -->
+    
     <div id="student-dashboard" class="dashboard-container hidden">
         <header>
             <h1>Student Dashboard</h1>
@@ -717,7 +717,7 @@
         </div>
     </div>
 
-    <!-- Supervisor Dashboard -->
+   
     <div id="supervisor-dashboard" class="dashboard-container hidden">
         <header>
             <h1>Personal Supervisor Dashboard</h1>
@@ -846,7 +846,7 @@
         </div>
     </div>
 
-    <!-- Senior Tutor Dashboard -->
+    
     <div id="tutor-dashboard" class="dashboard-container hidden">
         <header>
             <h1>Senior Tutor Dashboard</h1>
@@ -913,7 +913,7 @@
     </div>
 
     <script>
-        // Authentication Flow
+       
         let selectedRole = null;
 
         function selectRole(role) {
@@ -923,12 +923,12 @@
         }
 
         function register() {
-            // Registration logic here
+           
             proceedToDashboard();
         }
 
         function login() {
-            // Login validation here
+            
             proceedToDashboard();
         }
 
@@ -943,7 +943,7 @@
             initDateTimeInputs();
         }
 
-        // Original Global Functions
+        
         function logout() {
             document.querySelectorAll('.dashboard-container').forEach(d => d.classList.add('hidden'));
             document.getElementById('role-selection').classList.remove('hidden');
@@ -963,7 +963,7 @@
             event.currentTarget.classList.add("active");
         }
 
-        // Student Dashboard Functions
+        
         function setStatus(status) {
             document.querySelectorAll(".status-card").forEach(card => card.classList.remove("active"));
             event.currentTarget.classList.add("active");
@@ -1030,7 +1030,7 @@
             meetingsContainer.insertBefore(newMeetingItem, meetingsContainer.firstChild);
         }
 
-        // Supervisor Dashboard Functions
+        
         function filterStudents() {
             const filterValue = document.getElementById("status-filter").value;
             document.querySelectorAll(".student-card").forEach(card => {
@@ -1086,7 +1086,7 @@
             meetingsContainer.insertBefore(newMeetingItem, meetingsContainer.firstChild);
         }
 
-        // Shared Functions
+     
         function initDateTimeInputs() {
             const today = new Date().toISOString().split('T')[0];
             document.querySelectorAll("input[type='date']").forEach(input => {
@@ -1099,7 +1099,7 @@
             document.querySelectorAll("input[type='time']").forEach(input => input.value = timeString);
         }
 
-        // Initialization
+        
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('role-selection').classList.remove('hidden');
             document.getElementById('auth-page').classList.add('hidden');
